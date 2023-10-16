@@ -5,4 +5,5 @@
 //Console.WriteLine("This is the first line.");
 //Console.Write("This is the second line.");
 //Console.WriteLine('b');
-Console.WriteLine('Hello World!');
+//Console.WriteLine('Hello World!');
+Console.WriteLine(123);
