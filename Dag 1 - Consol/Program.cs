@@ -178,6 +178,6 @@
 //Console.WriteLine("Third: " + value);
 //Console.WriteLine("Fourth: " + (++value));
 
-//int fahrenheit = 94;
+int fahrenheit = 94;
 
-//Console.WriteLine($"The temperature is {(5/9m) * (-32 + fahrenheit)} Celsius.");
+Console.WriteLine($"The temperature is {(5/9m) * (-32 + fahrenheit)} Celsius.");
