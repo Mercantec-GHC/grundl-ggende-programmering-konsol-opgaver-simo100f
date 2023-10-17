@@ -201,25 +201,87 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 //// Example 2:
 //string firstWord = "Hello"; string lastWord = "Example 2"; Console.WriteLine(firstWord + " " + lastWord + "!");
 
-Random dice = new Random();
+//Random dice = new Random();
 
-int roll1 = dice.Next(1, 7);
-int roll2 = dice.Next(1, 7);
-int roll3 = dice.Next(1, 7);
+//int roll1 = dice.Next(1, 7);
+//int roll2 = dice.Next(1, 7);
+//int roll3 = dice.Next(1, 7);
 
-int total = roll1 + roll2 + roll3;
-Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+//int total = roll1 + roll2 + roll3;
+//Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
 
-if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
+//if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
+//{
+//    if ((roll1 == roll2) && (roll2 == roll3))
+//    {
+//        Console.WriteLine("You rolled triples!  +6 bonus to total!");
+//        total += 6;
+//    }
+//    else
+//    {
+//        Console.WriteLine("You rolled doubles!  +2 bonus to total!");
+//        total += 2;
+//    }
+//}
+
+//string str = "The quick brown fox jumps over the lazy dog.";
+
+//// convert the message into a char array
+//char[] charMessage = str.ToCharArray();
+
+//// Reverse the chars
+//Array.Reverse(charMessage);
+//int x = 0;
+
+//// count the o's
+//foreach (char i in charMessage) 
+//{ 
+//    if (i == 'o') 
+//    { 
+//        x++; 
+//    } 
+//}
+
+//// convert it back to a string
+//string new_message = new String(charMessage);
+
+//// print it out
+//Console.WriteLine(new_message);
+//Console.WriteLine($"'o' appears {x} times.");
+
+using System;
+
+// initialize variables - graded assignments 
+int currentAssignments = 5;
+
+int[] sophiaScores = new int[] { 90, 86, 87, 98, 100 };
+int[] andrewScores = new int[] { 92, 89, 81, 96, 90 };
+int[] emmaScores = new int[] { 90, 85, 87, 98, 68 };
+int[] loganScores = new int[] { 90, 95, 87, 88, 96 };
+
+// Student names
+string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
+
+foreach (string name in studentNames)
 {
-    if ((roll1 == roll2) && (roll2 == roll3))
+    if (name == "Sophia")
     {
-        Console.WriteLine("You rolled triples!  +6 bonus to total!");
-        total += 6;
-    }
-    else
-    {
-        Console.WriteLine("You rolled doubles!  +2 bonus to total!");
-        total += 2;
+        int sophiaSum = 0;
+
+        decimal sophiaScore;
+
+        foreach (int score in sophiaScores)
+        {
+            // add the exam score to the sum
+            sophiaSum += score;
+        }
+
+        sophiaScore = (decimal)sophiaSum / currentAssignments;
+
+        Console.WriteLine("Student\t\tGrade\n");
+        Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
     }
 }
+
+Console.WriteLine("Press the Enter key to continue");
+Console.ReadLine();
